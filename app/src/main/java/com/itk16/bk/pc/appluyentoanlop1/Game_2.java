@@ -21,12 +21,12 @@ public class Game_2 extends AppCompatActivity implements View.OnClickListener{
     private String field1, field2;
     private Intent intent;
     private int resuilt1,resuilt2 ;
-    int d;
     int status;//da chon 1 dap an
-    int sao=0;//tinh so cau dung
+    int NumberTrueAnswers=0;//tinh so cau dung
     int check;//kiem tra dung sai
     CountDownTimer timer;
     int numberQuestion=0;
+    private int sao=0;
     int N;
 
     @Override
@@ -46,7 +46,7 @@ public class Game_2 extends AppCompatActivity implements View.OnClickListener{
             break;
             case 2: N=20;
             break;
-            case 3:N=40;
+            case 3:N=50;
             break;
             case 4: N=60;
             break;
@@ -98,7 +98,7 @@ public class Game_2 extends AppCompatActivity implements View.OnClickListener{
      {
          if(status==0)
          {
-             sao+=1;
+             NumberTrueAnswers+=1;
              check=1;
              status=1;
          }
@@ -201,9 +201,21 @@ public class Game_2 extends AppCompatActivity implements View.OnClickListener{
                        numberQuestion++;
                    } else
                        {
+                           int k=0;
+                           if(NumberTrueAnswers!=0)
+                           {
+                               k=10/NumberTrueAnswers;
+                               if(k<=2&&k>0)
+                               {
+                                   if(k==1) sao=3;
+                                   else sao=2;
+                               }
+                               else sao= 1;
+                           }
+                           else sao= 0;
                            AlertDialog.Builder builder = new AlertDialog.Builder(this);
                            builder.setTitle("BẠN ĐÃ HOÀN THÀNH BÀI TẬP ");
-                           builder.setMessage("Bạn đã trả lời đúng " + sao);
+                           builder.setMessage("Bạn đã trả lời đúng " + NumberTrueAnswers);
                            builder.setCancelable(false);
                            builder.setIcon(R.drawable.bt_quatao);
                            builder.setPositiveButton(

@@ -2,10 +2,12 @@ package com.itk16.bk.pc.appluyentoanlop1.Databases;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Toast;
 
 
 import com.itk16.bk.pc.appluyentoanlop1.model.Lesson;
@@ -35,11 +37,11 @@ public class QueryDatabase extends AppCompatActivity {
         TABLE_NAME = tb;
         mContext = context;
         mUnit = Unit;
-        if(TABLE_NAME == "tbLeson"){
+        if(TABLE_NAME == "tbLesson"){
             LoadDataUnit();
         }
         else{
-
+            LoadDataLesson();
         }
 
     }
@@ -65,27 +67,33 @@ public class QueryDatabase extends AppCompatActivity {
         }
 
     }
+    public void UpdateData(Lesson lesson)
+    {
+        ContentValues contentValues= new ContentValues();
+        contentValues.put("Lock",lesson.getmLock() );
+        contentValues.put("NumberStar", lesson.getmNumberStar());
+        database.update(TABLE_NAME, contentValues, "Content="+lesson.getmContent()+" AND Unit="+mUnit,null);
 
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////
     public void LoadDataLesson(){
         try {
             database = mContext.openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
             Cursor cursor = database.rawQuery("select * from " + TABLE_NAME + " where Unit = " + mUnit, null);
             int check = 0;
 
+            Toast.makeText(mContext,"load data lesson 1", Toast.LENGTH_SHORT).show();
+
             while (cursor.moveToNext()){
                 mQuestion = cursor.getString(2);
                 mAnswer = cursor.getInt(3);
-
+                            // Sua lai
             }
             cursor.close();
         } catch (Exception ex){
             Log.d("ERROR", "error query " + ex.toString() );
         }
     }
-//    public void UpdateData(int lesson, int NumberStar){
-//        ContentValues newValues = new ContentValues();
-//        newValues.put("NumberStar", NumberStar);
-//        database.update(TABLE_NAME,newValues, "Content = " + lesson,null);
-//    }
-
 }

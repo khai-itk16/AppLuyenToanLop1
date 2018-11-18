@@ -26,7 +26,7 @@ public class SelectLessonActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selectlesson);
         try {
-            new DataBaseHelper(this, "dbLesson.sqlite");
+            new DataBaseHelper(this, "database.sqlite");
         } catch (IOException e) {
             e.printStackTrace();
         }
