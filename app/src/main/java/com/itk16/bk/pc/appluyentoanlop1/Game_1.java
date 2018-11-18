@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.itk16.bk.pc.appluyentoanlop1.model.ListQuestions;
 import com.itk16.bk.pc.appluyentoanlop1.model.Question;
 
@@ -24,12 +23,11 @@ public class Game_1 extends AppCompatActivity implements View.OnClickListener{
     TextView tvQuestion, tvCountdown;
     Button btQuestion1, btQuestion2, btQuestion3, btQuestion4, btPause,btBack,btNext;
     private int vt=0;
-    private int sao=0;
+    private int NumberTrueAnswers=0;
     private int status;
-    private int check;
     private Intent intent;
     CountDownTimer timer;
-    int[] k= new int[]{0, 0, 0, 0};
+    private int sao=0;
       @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +35,6 @@ public class Game_1 extends AppCompatActivity implements View.OnClickListener{
         init();
         kecha();
       }
-
     public void init()
     {
 
@@ -64,12 +61,7 @@ public class Game_1 extends AppCompatActivity implements View.OnClickListener{
     public void kecha() {
         if (vt < mListquestions.getmListQuestions().size()){
             Question question = mListquestions.getmListQuestions().get(vt);
-        check= 0;
         status=0;
-        for (int i= 0; i< k.length; i++)
-        {
-            k[i]=0;
-        }
         btQuestion1.setBackgroundResource(R.drawable.dapan);
         btQuestion2.setBackgroundResource(R.drawable.dapan);
         btQuestion3.setBackgroundResource(R.drawable.dapan);
@@ -93,12 +85,25 @@ public class Game_1 extends AppCompatActivity implements View.OnClickListener{
         }.start();
     }
     else {
+
+            int k=0;
+            if(NumberTrueAnswers!=0)
+            {
+                k= mListquestions.getmListQuestions().size()/NumberTrueAnswers;
+                if(k<=2&&k>0)
+                {
+                    if(k==1) sao=3;
+                    else sao=2;
+                }
+                else sao= 1;
+            }
+            else sao= 0;
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("BẠN ĐÃ HOÀN THÀNH BÀI TẬP ");
-            builder.setMessage("Bạn đã trả lời đúng " + sao);
+            builder.setMessage("Bạn đã trả lời đúng " + NumberTrueAnswers);
             builder.setCancelable(false);
             builder.setIcon(R.drawable.bt_quatao);
-
             builder.setPositiveButton(
                 "OK",
                 new DialogInterface.OnClickListener() {
@@ -118,8 +123,7 @@ public class Game_1 extends AppCompatActivity implements View.OnClickListener{
     {
              if(status==0)
             {
-                sao+=1;
-                check=1;
+                NumberTrueAnswers+=1;
                 status=1;
             }
     }

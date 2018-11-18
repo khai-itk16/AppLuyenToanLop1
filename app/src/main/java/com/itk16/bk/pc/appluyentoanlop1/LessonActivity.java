@@ -21,7 +21,8 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
     private Button bt_back;
     private ListView listView;
     private Integer chuong;
-    CustomAdapter customAdapter;
+   private  QueryDatabase queryDatabase;
+    private CustomAdapter customAdapter;
     private static HashMap map = new HashMap<Integer, Integer>();
     private ArrayList<Lesson> ArrayLesson = new ArrayList<>();
     static {
@@ -36,7 +37,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         chuong = getIntent().getIntExtra("chuong", -1);
         setContentView((Integer)map.get(chuong));
-         QueryDatabase queryDatabase = new QueryDatabase("dbLesson.sqlite","tbLesson", this, chuong);
+         queryDatabase = new QueryDatabase("dbLesson.sqlite","tbLesson", this, chuong);
          ArrayLesson.addAll(queryDatabase.mArrayLesson);
 
         init();
@@ -60,16 +61,47 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
             if(resultCode == 1){
                 int sao = data.getIntExtra("sao",-1);
                 Toast.makeText(this, "duoc "+sao, Toast.LENGTH_SHORT).show();
-                ArrayLesson.get(0).setmNumberStar(3);
+
+                if(ArrayLesson.get(0).getmNumberStar()<sao)
+                {
+                    ArrayLesson.get(0).setmNumberStar(sao);
+                    queryDatabase.UpdateData(ArrayLesson.get(0));
+                }
+                if(sao >=2) {
+                    ArrayLesson.get(1).setmLock(false);
+                    queryDatabase.UpdateData(ArrayLesson.get(1));
+                }
                 customAdapter.notifyDataSetChanged();
+
+
             }
             if(resultCode == 2){
-                int sao = data.getIntExtra("sao",-1);
-                Toast.makeText(this, "duoc"+sao, Toast.LENGTH_SHORT).show();
+                int star = data.getIntExtra("sao",-1);
+                Toast.makeText(this, "duoc"+star, Toast.LENGTH_SHORT).show();
+                if(ArrayLesson.get(1).getmNumberStar()<star)
+                {
+                    ArrayLesson.get(1).setmNumberStar(star);
+                    queryDatabase.UpdateData(ArrayLesson.get(1));
+                }
+                if(star >=2) {
+                    ArrayLesson.get(2).setmLock(false);
+                    queryDatabase.UpdateData(ArrayLesson.get(2));
+                }
+                customAdapter.notifyDataSetChanged();
             }
             if(resultCode == 3){
                 int sao = data.getIntExtra("sao",-1);
                 Toast.makeText(this, "dươc"+sao, Toast.LENGTH_SHORT).show();
+                if(ArrayLesson.get(2).getmNumberStar()<sao)
+                {
+                    ArrayLesson.get(2).setmNumberStar(sao);
+                    queryDatabase.UpdateData(ArrayLesson.get(2));
+                }
+                if(sao >=2) {
+                    ArrayLesson.get(3).setmLock(false);
+                    queryDatabase.UpdateData(ArrayLesson.get(3));
+                }
+                customAdapter.notifyDataSetChanged();
             }
         }
     }

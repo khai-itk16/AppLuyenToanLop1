@@ -1,6 +1,8 @@
 package com.itk16.bk.pc.appluyentoanlop1.Databases;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -49,6 +51,14 @@ public class QueryDatabase extends AppCompatActivity {
         } catch (Exception ex){
             Log.d("ERROR", "error query " + ex.toString() );
         }
+
+    }
+    public void UpdateData(Lesson lesson)
+    {
+        ContentValues contentValues= new ContentValues();
+        contentValues.put("Lock",lesson.getmLock() );
+        contentValues.put("NumberStar", lesson.getmNumberStar());
+        database.update(TABLE_NAME, contentValues, "Content="+lesson.getmContent()+" AND Unit="+mUnit,null);
 
     }
 

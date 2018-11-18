@@ -34,9 +34,9 @@ public class Game_3 extends AppCompatActivity implements View.OnClickListener{
     int da;//vi tri dap an dung
     CountDownTimer timer;
     private int status;
-    private int star;
-    private int check;
+    private int NumberTrueAnswers=0;
     int n=0;
+    private int star=0;
     int N;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -94,7 +94,6 @@ public class Game_3 extends AppCompatActivity implements View.OnClickListener{
         btResponse3.setText(Da[2]+"");
         btResponse4.setText(Da[3]+"");
         status=0;
-        check=0;
         ArrayList<ItemImage> item_images = new ArrayList<>();
         for (int i= 0; i<k;i++)
         {
@@ -144,8 +143,8 @@ public class Game_3 extends AppCompatActivity implements View.OnClickListener{
     {
         if(status==0)
         {
-            check= 1;
-            star+=1;
+
+            NumberTrueAnswers+=1;
             status=1;
         }
     }
@@ -213,9 +212,21 @@ public class Game_3 extends AppCompatActivity implements View.OnClickListener{
                     {n++;
                     kecha();
                     }else{
+                        int k=0;
+                        if(NumberTrueAnswers!=0)
+                        {
+                            k=10/NumberTrueAnswers;
+                            if(k<=2&&k>0)
+                            {
+                                if(k==1) star=3;
+                                else star=2;
+                            }
+                            else star= 1;
+                        }
+                        else star= 0;
                         AlertDialog.Builder builder = new AlertDialog.Builder(this);
                         builder.setTitle("BẠN ĐÃ HOÀN THÀNH BÀI TẬP ");
-                        builder.setMessage("Bạn đã trả lời đúng " + star);
+                        builder.setMessage("Bạn đã trả lời đúng " + NumberTrueAnswers);
                         builder.setCancelable(false);
                         builder.setIcon(R.drawable.bt_quatao);
 
