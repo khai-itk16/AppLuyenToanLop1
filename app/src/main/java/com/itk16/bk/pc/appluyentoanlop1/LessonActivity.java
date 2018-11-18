@@ -20,7 +20,8 @@ import java.util.HashMap;
 public class LessonActivity extends AppCompatActivity implements View.OnClickListener {
     private Button bt_back;
     private ListView listView;
-    private Integer chuong;
+    private Integer unit;
+    private QueryDatabase queryDatabase;
     CustomAdapter customAdapter;
     private static HashMap map = new HashMap<Integer, Integer>();
     private ArrayList<Lesson> ArrayLesson = new ArrayList<>();
@@ -34,19 +35,18 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        chuong = getIntent().getIntExtra("chuong", -1);
-        setContentView((Integer)map.get(chuong));
-         QueryDatabase queryDatabase = new QueryDatabase("dbLesson.sqlite","tbLesson", this, chuong);
-         ArrayLesson.addAll(queryDatabase.mArrayLesson);
-
+        unit = getIntent().getIntExtra("chuong", -1);
+        setContentView((Integer)map.get(unit));
         init();
         setevent();
-        customAdapter = new CustomAdapter(LessonActivity.this,R.layout.item,ArrayLesson, chuong);
+        customAdapter = new CustomAdapter(LessonActivity.this,R.layout.item,ArrayLesson, unit);
         listView.setAdapter(customAdapter);
 
     }
     public void init()
     {
+        queryDatabase = new QueryDatabase("dbLesson.sqlite","tbLesson", this, unit);
+        ArrayLesson.addAll(queryDatabase.mArrayLesson);
         bt_back=(Button)findViewById(R.id.nut_thoat);
         listView=(ListView)findViewById(R.id.lv);
     }

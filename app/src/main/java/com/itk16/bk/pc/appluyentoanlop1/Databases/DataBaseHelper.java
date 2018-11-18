@@ -17,12 +17,13 @@ import java.io.OutputStream;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
     private Context mycontext;
-    private static String DB_NAME = "dbLesson.sqlite";
+    private static String DB_NAME;
     private static String DB_PATH ="/data/data/"+BuildConfig.APPLICATION_ID+"/databases/";
     public SQLiteDatabase myDataBase;
 
-    public DataBaseHelper(Context context) throws IOException {
+    public DataBaseHelper(Context context, String db) throws IOException {
         super(context,DB_NAME,null,1);
+        DB_NAME = db;
         this.mycontext=context;
         boolean dbexist = checkdatabase();
         if (dbexist) {
