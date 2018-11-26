@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/hang1"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="@dimen/head"
         android:orientation="horizontal">
 
 
@@ -26,16 +26,16 @@
                 android:text="1000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/color_diem"
-                android:textSize="20sp" />
+                android:textSize="@dimen/text_size" />
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="@dimen/sizestar"
+                android:layout_height="@dimen/sizestar"
                 android:background="@drawable/sao" />
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="400dp"
+            android:layout_width="@dimen/title_area"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -45,20 +45,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text=""
+                android:text="@string/titlelesson5"
                 android:textAlignment="center"
                 android:textColor="@color/color_diem"
-                android:textSize="20sp" />
+                android:textSize="@dimen/text_size_small" />
 
 
         </RelativeLayout>
 
         <Button
             android:id="@+id/nut_thoat"
-            android:layout_width="59dp"
-            android:layout_height="62dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/size_back"
+            android:layout_height="@dimen/size_back"
+            android:layout_marginLeft="@dimen/margin_button"
+            android:layout_marginTop="@dimen/margin_button"
             android:background="@drawable/custombackbutton" />
     </RelativeLayout>
 
@@ -66,7 +66,7 @@
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="15dp">
+        android:layout_margin="@dimen/margin_button">
 
     </ListView>
 
