@@ -21,7 +21,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
     private Button bt_back;
     private ListView listView;
     private Integer chuong;
-   private  QueryDatabase queryDatabase;
+    private  QueryDatabase queryDatabase;
     private CustomAdapter customAdapter;
     private static HashMap map = new HashMap<Integer, Integer>();
     private ArrayList<Lesson> ArrayLesson = new ArrayList<>();
@@ -37,7 +37,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         chuong = getIntent().getIntExtra("chuong", -1);
         setContentView((Integer)map.get(chuong));
-         queryDatabase = new QueryDatabase("dbLesson.sqlite","tbLesson", this, chuong);
+         queryDatabase = new QueryDatabase("database.sqlite","tbLesson", this, chuong);
          ArrayLesson.addAll(queryDatabase.mArrayLesson);
 
         init();
