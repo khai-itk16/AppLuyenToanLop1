@@ -26,7 +26,7 @@ public class SelectLessonActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selectlesson);
         khaibao();
-        setevnet();
+        setevenet();
 
     }
     public void khaibao()
@@ -44,7 +44,7 @@ public class SelectLessonActivity extends AppCompatActivity implements View.OnCl
         bt4.setTag(4);
         bt5.setTag(5);
     }
-    public void setevnet()
+    public void setevenet()
     {
         bt_back.setOnClickListener((View.OnClickListener) this);
         bt1.setOnClickListener((View.OnClickListener) this);

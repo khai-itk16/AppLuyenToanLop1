@@ -5,8 +5,8 @@
 
     <TextView
         android:id="@+id/Tv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/itemtext"
+        android:layout_height="@dimen/itemtext"
         android:gravity="center"
         android:textSize="@dimen/text_size_button"
         android:textColor="#000"
