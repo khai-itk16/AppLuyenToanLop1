@@ -26,7 +26,7 @@
             android:padding="10dp"
             android:textColor="#fff"
             android:textSize="30dp"
-            android:text="Chữ số" />
+            android:text="@string/numeral" />
 
         <Button
             android:id="@+id/bt_menu2"
@@ -36,7 +36,7 @@
             android:background="@drawable/custombuttonstart"
             android:textColor="#fff"
             android:textSize="30dp"
-            android:text="Hình học" />
+            android:text="@string/geometry" />
 
         <Button
             android:id="@+id/btnExit"
@@ -46,6 +46,6 @@
             android:background="@drawable/custombuttonstart"
             android:textColor="#fff"
             android:textSize="30dp"
-            android:text="Thoát" />
+            android:text="@string/exit" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
