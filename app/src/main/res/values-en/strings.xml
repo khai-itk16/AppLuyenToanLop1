@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LuyenToanLop1CungBe</string>
+    <string name="diem" translatable="false"><b>1000</b></string>
+    <string name="titlelesson1"><b>Get familiar with the numbers in the range 10</b></string>
+    <string name="titlelesson2" translatable="false"><b>Get familiar with the numbers in the range 20</b></string>
+    <string name="titlelesson3" translatable="false"><b>Get familiar with the numbers in the range 50</b></string>
+    <string name="titlelesson4" translatable="false"><b>Get familiar with the numbers in the range 100</b></string>
+    <string name="titlelesson5" translatable="false"><b>Get familiar with the number of tens</b></string>
+        <string name="titlelesson6" translatable="false"><b>REVIEW</b></string>
+    <string name="numeral" translatable="false"><b>NUMERAL</b></string>
+    <string name="geometry" translatable="false"><b>GEOMETRY</b></string>
+    <string name="exit" translatable="false"><b>EXIT</b></string>
+    <string name="start" translatable="false"><b>PRESS START</b></string>
+    <string name="name_Lesson" translatable="false"><b>Name of Lessons</b></string>
+    <string name="nameLesson1" translatable="false"><b>CHAPTER 1</b></string>
+    <string name="nameLesson2" translatable="false"><b>CHAPTER 2</b></string>
+    <string name="nameLesson3" translatable="false"><b>CHAPTER 3</b></string>
+    <string name="nameLesson4" translatable="false"><b>CHAPTER 4</b></string>
+    <string name="nameLesson5" translatable="false"><b>CHAPTER 5</b></string>
+    <string name="nameLesson6" translatable="false"><b>CHAPTER 6</b></string>
+</resources>
