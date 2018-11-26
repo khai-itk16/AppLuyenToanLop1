@@ -1,0 +1,21 @@
+<?xmlversion="1.0"encoding="utf-8"?>
+<resources>
+<dimen name="text_size">13.400001sp</dimen>
+<dimen name="text_size_button">26.800001sp</dimen>
+<dimen name="text_size_small">13.400001sp</dimen>
+<dimen name="padding">16.75dp</dimen>
+<dimen name="margin_image">6.7000003dp</dimen>
+<dimen name="margin_button">6.7000003dp</dimen>
+<dimen name="margin_image_1">3.3500001dp</dimen>
+<dimen name="bt_height">56.95dp</dimen>
+<dimen name="sizestar">20.1dp</dimen>
+<dimen name="size_back">40.2dp</dimen>
+<dimen name="head">43.55dp</dimen>
+<dimen name="title_area">268.0dp</dimen>
+<dimen name="widthtimecountdown">134.0dp</dimen>
+<dimen name="widthbtnext">67.0dp</dimen>
+<dimen name="heigthbtnext">33.5dp</dimen>
+<dimen name="widthgridgame3">335.0dp</dimen>
+<dimen name="itemimage">26.800001dp</dimen>
+<dimen name="itemtext">33.5dp</dimen>
+</resources>
