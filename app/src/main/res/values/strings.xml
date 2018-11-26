@@ -7,4 +7,17 @@
     <string name="titlelesson4"><b>LÀM QUEN VỚI CÁC SỐ TRONG PHẠM VI 100</b></string>
     <string name="titlelesson5"><b>LÀM QUEN VỚI CÁC SỐ TRÒN CHỤC</b></string>
     <string name="titlelesson6"><b>ÔN TẬP</b></string>
+    <string name="numeral"><b>CHỮ SỐ</b></string>
+    <string name="geometry"><b>HÌNH HỌC</b></string>
+    <string name="exit"><b>THOÁT</b></string>
+    <string name="start"><b>BẮT ĐẦU NÀO</b></string>
+    <string name="name_Lesson"><b>Tên bài học</b></string>
+    <string name="nameLesson1"><b>CHƯƠNG 1</b></string>
+    <string name="nameLesson2"><b>CHƯƠNG 2</b></string>
+    <string name="nameLesson3"><b>CHƯƠNG 3</b></string>
+    <string name="nameLesson4"><b>CHƯƠNG 4</b></string>
+    <string name="nameLesson5"><b>CHƯƠNG 5</b></string>
+    <string name="nameLesson6"><b>CHƯƠNG 6</b></string>
+
+
 </resources>

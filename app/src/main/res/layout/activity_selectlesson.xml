@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="1000"
+                android:text="@string/diem"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/mauvang"
                 android:textSize="20sp" />
@@ -88,7 +88,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CHƯƠNG 1"
+                    android:text="@string/nameLesson1"
                     android:textColor="@color/mauchublue"
                     android:textAlignment="center"
                     android:textSize="20sp"
@@ -113,7 +113,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CHƯƠNG 2"
+                    android:text="@string/nameLesson2"
                     android:textColor="@color/mauchublue"
                     android:textAlignment="center"
                     android:textSize="20sp"
@@ -139,7 +139,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CHƯƠNG 3"
+                    android:text="@string/nameLesson3"
                     android:textColor="@color/mauchublue"
                     android:textAlignment="center"
                     android:textSize="20sp"
@@ -171,7 +171,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CHƯƠNG 4"
+                    android:text="@string/nameLesson4"
                     android:textColor="@color/mauchublue"
                     android:textAlignment="center"
                     android:textSize="20sp"
@@ -196,7 +196,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CHƯƠNG 5"
+                    android:text="@string/nameLesson5"
                     android:textColor="@color/mauchublue"
                     android:textAlignment="center"
                     android:textSize="20sp"
@@ -221,7 +221,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CHƯƠNG 6"
+                    android:text="@string/nameLesson6"
                     android:textColor="@color/mauchublue"
                     android:textAlignment="center"
                     android:textSize="20sp"

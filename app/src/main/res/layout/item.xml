@@ -10,18 +10,18 @@
 
     <ImageView
         android:id="@+id/Lock"
-        android:layout_width="53dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="@dimen/size_back"
+        android:layout_height="@dimen/size_back"
+        android:layout_marginBottom="@dimen/margin_image"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/margin_image"
         android:layout_weight="1" />
 
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ten bai hoc"
+        android:text="@string/name_Lesson"
         android:textSize="@dimen/text_size_button"
         android:textColor="#f9ee2d"
         android:gravity="center"
@@ -30,12 +30,12 @@
 
     <Button
         android:id="@+id/bt_hoc"
-        android:layout_width="145dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/widthbtnext"
+        android:layout_height="@dimen/heigthbtnext"
         android:layout_gravity="center"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="@dimen/padding"
         android:layout_weight="1"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size"
         android:text="HOC"/>
 
 </LinearLayout>
