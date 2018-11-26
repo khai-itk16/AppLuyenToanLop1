@@ -13,7 +13,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.itk16.bk.pc.appluyentoanlop1.adapter.Custom_GridView;
+import com.itk16.bk.pc.appluyentoanlop1.adapter.CustomGridView;
 import com.itk16.bk.pc.appluyentoanlop1.model.ItemImage;
 import com.itk16.bk.pc.appluyentoanlop1.model.ListItemImage;
 
@@ -99,7 +99,7 @@ public class Game_3 extends AppCompatActivity implements View.OnClickListener{
         {
             item_images.add(new ItemImage(listItemImage.getmArrImages().get(a).getmImageResource(),listItemImage.getmArrImages().get(a).getmImageName()));
         }
-        Custom_GridView custom_gridView= new Custom_GridView(this, R.layout.item_anh, item_images, listItemImage.getmArrImages().get(a).getmImageResource());
+        CustomGridView custom_gridView= new CustomGridView(this, R.layout.item_text, item_images, listItemImage.getmArrImages().get(a).getmImageResource());
         gridView.setAdapter(custom_gridView);
 
 

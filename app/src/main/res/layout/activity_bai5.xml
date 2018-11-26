@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="CÁC SỐ TRONG PHẠM VI 100"
+                android:text=""
                 android:textAlignment="center"
                 android:textColor="@color/color_diem"
                 android:textSize="20sp" />

@@ -16,26 +16,26 @@ import com.itk16.bk.pc.appluyentoanlop1.model.ItemImage;
 import java.util.ArrayList;
 
 
-public class Custom_GridView  extends ArrayAdapter<ItemImage>{
+public class CustomGridView extends ArrayAdapter<ItemImage>{
     private  Context context;
     private int Item;
     private ArrayList<ItemImage> arrA;
-    private int i;
-    public Custom_GridView(@NonNull Context context, int resource, @NonNull ArrayList<ItemImage> objects, int i) {
+    private int imageresource;
+    public CustomGridView(@NonNull Context context, int resource, @NonNull ArrayList<ItemImage> objects, int i) {
         super(context, resource, objects);
         this.context=context;
         this.Item= resource;
         this.arrA= objects;
-        this.i= i;
+        this.imageresource= i;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        convertView = LayoutInflater.from(context).inflate(R.layout.item_anh, parent, false);
+        convertView = LayoutInflater.from(context).inflate(R.layout.item_image, parent, false);
         ItemImage IA= arrA.get(position);
         ImageView IM=(ImageView)convertView.findViewById(R.id.IM);
-        IM.setImageResource(i);
+        IM.setImageResource(imageresource);
         return convertView;
     }
 }

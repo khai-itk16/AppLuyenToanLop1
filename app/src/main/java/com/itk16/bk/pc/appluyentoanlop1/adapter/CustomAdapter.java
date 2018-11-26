@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.itk16.bk.pc.appluyentoanlop1.Game_1;
 import com.itk16.bk.pc.appluyentoanlop1.Game_2;
 import com.itk16.bk.pc.appluyentoanlop1.Game_3;
+import com.itk16.bk.pc.appluyentoanlop1.Game_4;
 import com.itk16.bk.pc.appluyentoanlop1.LessonActivity;
 import com.itk16.bk.pc.appluyentoanlop1.R;
 import com.itk16.bk.pc.appluyentoanlop1.model.Lesson;
@@ -111,6 +112,12 @@ public class CustomAdapter extends ArrayAdapter<Lesson> {
                             intent3.putExtra("chuong", chuong);
                             ((LessonActivity)context).startActivityForResult(intent3, 1);
                             break;
+                        case 4:
+                            Intent intent4 = new Intent(context, Game_4.class);
+                            intent4.putExtra("chuong", chuong);
+                            ((LessonActivity)context).startActivityForResult(intent4, 1);
+                            break;
+
                     }
                 }
             }

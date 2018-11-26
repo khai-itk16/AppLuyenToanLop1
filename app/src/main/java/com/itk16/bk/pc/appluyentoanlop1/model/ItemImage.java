@@ -1,6 +1,8 @@
 package com.itk16.bk.pc.appluyentoanlop1.model;
 
-public class ItemImage {
+import android.widget.Adapter;
+
+public class ItemImage  {
     private int mImageResource;
     private String mImageName;
 

@@ -25,11 +25,6 @@ public class SelectLessonActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selectlesson);
-        try {
-            new DataBaseHelper(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         khaibao();
         setevnet();
 

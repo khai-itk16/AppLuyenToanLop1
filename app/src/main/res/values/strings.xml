@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">LuyenToanLop1CungBe</string>
     <string name="diem"><b>1000</b></string>
-    <string name="title"><b>LÀM QUEN CÁC SỐ TỪ 1 ĐẾN 10</b></string>
-
+    <string name="titlelesson1"><b>LÀM QUEN CÁC SỐ TRONG PHẠM VI 10</b></string>
+    <string name="titlelesson2"><b>LÀM QUEN VỚI CÁC SỐ TRONG PHẠM VI 20</b></string>
+    <string name="titlelesson3"><b>LÀM QUEN VỚI CÁC SỐ TRONG PHẠM VI 50</b></string>
+    <string name="titlelesson4"><b>LÀM QUEN VỚI CÁC SỐ TRONG PHẠM VI 100</b></string>
+    <string name="titlelesson5"><b>LÀM QUEN VỚI CÁC SỐ TRÒN CHỤC</b></string>
+    <string name="titlelesson6"><b>ÔN TẬP</b></string>
 </resources>

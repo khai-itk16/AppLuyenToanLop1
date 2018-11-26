@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size">20dp</dimen>
-    <dimen name="text_size_button">40dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="text_size_button">40sp</dimen>
     <dimen name="padding">25dp</dimen>
     <dimen name="margin_image">10dp</dimen>
+    <dimen name="margin_button">10dp</dimen>
     <dimen name="margin_image_1">5dp</dimen>
     <dimen name="bt_height">85dp</dimen>
     <dimen name="text_size_small">20sp</dimen>
+    <dimen name="sizestar">30dp</dimen>
+    <dimen name="size_back">60dp</dimen>
+    <dimen name="head">65dp</dimen>
+    <dimen name="title_area">400dp</dimen>
 </resources>

@@ -54,14 +54,43 @@
         android:weightSum="2">
 
         <TextView
-            android:layout_marginTop="20dp"
+            android:id="@+id/tv_Question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="cau hoi dat tai day"
+            android:layout_marginTop="20dp"
             android:gravity="center"
+            android:text="cau hoi dat tai day"
             android:textColor="#fff"
-            android:textSize="@dimen/text_size"
-            />
+            android:textSize="@dimen/text_size" />
+
+        <GridView
+            android:id="@+id/gr_Answer"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:numColumns="10">
+
+        </GridView>
+
+        <GridView
+            android:id="@+id/gr_Index"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:numColumns="10">
+
+        </GridView>
+        <Button
+            android:id="@+id/bt_OK"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_next"/>
 
 
     </LinearLayout>
