@@ -37,7 +37,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         chuong = getIntent().getIntExtra("chuong", -1);
         setContentView((Integer)map.get(chuong));
-         queryDatabase = new QueryDatabase("database.sqlite","tbLesson", this, chuong);
+         queryDatabase = new QueryDatabase("database1.sqlite","tbLesson", this, chuong);
          ArrayLesson.addAll(queryDatabase.mArrayLesson);
 
         init();

@@ -31,6 +31,11 @@ public class SelectLessonActivity extends AppCompatActivity implements View.OnCl
     }
     public void khaibao()
     {
+        try {
+            new DataBaseHelper(this,"database1.sqlite");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         bt_back = findViewById(R.id.bt_back);
         bt1 = findViewById(R.id.bt1);
         bt2 = findViewById(R.id.bt2);

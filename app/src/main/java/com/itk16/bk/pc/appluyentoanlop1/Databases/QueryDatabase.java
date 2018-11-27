@@ -21,7 +21,7 @@ public class QueryDatabase extends AppCompatActivity {
     private int mContent;
     private int mNumberStar;
 
-    private String  mQuestion;
+    private String mQuestion;
     private int mAnswer;
     private ArrayList<Question> mListQuestions = new ArrayList<>();
 
@@ -37,63 +37,37 @@ public class QueryDatabase extends AppCompatActivity {
         TABLE_NAME = tb;
         mContext = context;
         mUnit = Unit;
-        if(TABLE_NAME == "tbLesson"){
-            LoadDataUnit();
-        }
-        else{
-            LoadDataLesson();
-        }
-
+        LoadDataUnit();
     }
 
 
-    public void LoadDataUnit(){
+    public void LoadDataUnit() {
         try {
-            database = mContext.openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
+            database = mContext.openOrCreateDatabase(DATABASE_NAME, MODE_PRIVATE, null);
             Cursor cursor = database.rawQuery("select * from " + TABLE_NAME + " where Unit = " + mUnit, null);
             int check = 0;
 
-            while (cursor.moveToNext()){
+            while (cursor.moveToNext()) {
                 mNameLesson = cursor.getString(2);
                 check = cursor.getInt(3);
                 mLock = (check != 0) ? true : false;
                 mContent = cursor.getInt(4);
                 mNumberStar = cursor.getInt(5);
-                mArrayLesson.add(new Lesson(mNameLesson,mLock,mContent,mNumberStar));
+                mArrayLesson.add(new Lesson(mNameLesson, mLock, mContent, mNumberStar));
             }
             cursor.close();
-        } catch (Exception ex){
-            Log.d("ERROR", "error query " + ex.toString() );
+        } catch (Exception ex) {
+            Log.d("ERROR", "error query " + ex.toString());
         }
 
     }
-    public void UpdateData(Lesson lesson)
-    {
-        ContentValues contentValues= new ContentValues();
-        contentValues.put("Lock",lesson.getmLock() );
+
+    public void UpdateData(Lesson lesson) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Lock", lesson.getmLock());
         contentValues.put("NumberStar", lesson.getmNumberStar());
-        database.update(TABLE_NAME, contentValues, "Content="+lesson.getmContent()+" AND Unit="+mUnit,null);
+        database.update(TABLE_NAME, contentValues, "Content=" + lesson.getmContent() + " AND Unit=" + mUnit, null);
 
     }
 
-    //////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////
-    public void LoadDataLesson(){
-        try {
-            database = mContext.openOrCreateDatabase(DATABASE_NAME,MODE_PRIVATE,null);
-            Cursor cursor = database.rawQuery("select * from " + TABLE_NAME + " where Unit = " + mUnit, null);
-            int check = 0;
-
-            Toast.makeText(mContext,"load data lesson 1", Toast.LENGTH_SHORT).show();
-
-            while (cursor.moveToNext()){
-                mQuestion = cursor.getString(2);
-                mAnswer = cursor.getInt(3);
-                            // Sua lai
-            }
-            cursor.close();
-        } catch (Exception ex){
-            Log.d("ERROR", "error query " + ex.toString() );
-        }
-    }
 }

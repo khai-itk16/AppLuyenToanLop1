@@ -43,7 +43,6 @@ public class Game_1 extends AppCompatActivity implements View.OnClickListener{
 
         intent = getIntent();
         lc = intent.getIntExtra("chuong", -1);
-        queryDatabase = new QueryDatabase("database.sqlite","tbQuestion", this, lc);
         mListquestions= new ListQuestions(lc);
         btNext=(Button)findViewById(R.id.next) ;
         btQuestion1= (Button)findViewById(R.id.bt_da1);
